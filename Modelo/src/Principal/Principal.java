@@ -3,6 +3,7 @@ package Principal;
 import Controlador.Controlador;
 import Modelo.Cliente;
 import Vista.Vista;
+import Modelo.Proveedor;
 
 public class Principal {
 
@@ -11,7 +12,10 @@ public class Principal {
         
         Cliente objCliente = new Cliente();
         Vista objFormulario = new Vista();
-        Controlador objControlador = new Controlador(objCliente, objFormulario);
+        Proveedor objProveedor = new Proveedor();
+        
+        
+        Controlador objControlador = new Controlador(objCliente, objFormulario, objProveedor);
         objControlador.iniciarFormulario();
        
     }
